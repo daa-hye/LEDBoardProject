@@ -32,6 +32,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="512" height="34.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="endEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Yh4-if-Tsz"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGG-Nd-VUd">
                                                 <rect key="frame" x="520" y="0.0" width="75" height="34.333333333333336"/>
@@ -45,6 +48,9 @@
                                                 <rect key="frame" x="603" y="0.0" width="75" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="randomFontColorBottonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YHm-A8-Sy7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -60,6 +66,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="5fA-Gl-zuN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DPa-91-xOb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5fA-Gl-zuN" secondAttribute="trailing" constant="20" id="Doy-Mh-yUY"/>
@@ -69,6 +76,9 @@
                             <constraint firstItem="5fA-Gl-zuN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hHE-Eh-hZ1"/>
                             <constraint firstItem="xBs-zl-6FD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="l7u-Sv-oqe"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qa0-b0-QbF" appends="YES" id="III-zx-79j"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="displayLabel" destination="5fA-Gl-zuN" id="was-8w-rGb"/>
@@ -79,6 +89,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qa0-b0-QbF">
+                    <connections>
+                        <action selector="mainViewDidTap:" destination="BYZ-38-t0r" id="VeI-va-vjS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="138" y="4"/>
         </scene>

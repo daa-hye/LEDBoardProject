@@ -54,7 +54,17 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func randomFontColorBottonDidTap(_ sender: UIButton) {
+    }
 
+    @IBAction func endEditing(_ sender: UITextField) {
+        sender.endEditing(true)
+        sendButtonDidTap(sendButton)
+    }
+
+    @IBAction func mainViewDidTap(_ sender: UITapGestureRecognizer) {
+        inputTextField.endEditing(true)
+    }
 
 }
 
