@@ -55,6 +55,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func randomFontColorBottonDidTap(_ sender: UIButton) {
+        let randomRed: CGFloat = CGFloat.random(in: 0...255)/255
+        let randomGreen: CGFloat = CGFloat.random(in: 0...255)/255
+        let randomBlue: CGFloat = CGFloat.random(in: 0...255)/255
+        let randomColor = UIColor(displayP3Red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1)
+        displayLabel.textColor = randomColor
+        randomFontColorButton.setTitleColor(randomColor, for: .normal)
     }
 
     @IBAction func endEditing(_ sender: UITextField) {
