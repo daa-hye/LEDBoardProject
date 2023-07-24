@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         let randomRed: CGFloat = CGFloat.random(in: 0...255)/255
         let randomGreen: CGFloat = CGFloat.random(in: 0...255)/255
         let randomBlue: CGFloat = CGFloat.random(in: 0...255)/255
-        let randomColor = UIColor(displayP3Red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1)
+        let randomColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1)
         displayLabel.textColor = randomColor
         randomFontColorButton.setTitleColor(randomColor, for: .normal)
     }
@@ -69,7 +69,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func mainViewDidTap(_ sender: UITapGestureRecognizer) {
-        inputTextField.endEditing(true)
+        if inputTextField.isEditing == true {
+            inputTextField.endEditing(true)
+        } else {
+            textFieldView.isHidden.toggle()
+        }
     }
 
 }
