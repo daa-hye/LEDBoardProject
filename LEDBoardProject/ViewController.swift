@@ -36,7 +36,24 @@ class ViewController: UIViewController {
         randomFontColorButton.setTitleColor(.red, for: .normal)
         randomFontColorButton.layer.cornerRadius = 10
         displayLabel.textColor = .red
+        displayLabel.text = ""
+        displayLabel.textAlignment = .center
+        displayLabel.font = .boldSystemFont(ofSize: 100)
     }
+
+    @IBAction func sendButtonDidTap(_ sender: UIButton) {
+        guard inputTextField.text!.trimmingCharacters(in: .whitespaces) != "" else {
+            let alert = UIAlertController(title: "입력값 없음", message: "한글자 이상 입력해주세요", preferredStyle: .alert)
+            let confirm = UIAlertAction(title: "확인", style: .cancel)
+            alert.addAction(confirm)
+            present(alert, animated: true)
+            return
+        }
+        if let inputWord = inputTextField.text {
+            displayLabel.text = inputWord
+        }
+    }
+
 
 
 }

@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBs-zl-6FD">
-                                <rect key="frame" x="79" y="20" width="694" height="50.333333333333343"/>
+                                <rect key="frame" x="79" y="20.000000000000004" width="694" height="50.333333333333343"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gmS-di-vw1">
                                         <rect key="frame" x="8" y="8" width="678" height="34.333333333333336"/>
@@ -37,6 +37,9 @@
                                                 <rect key="frame" x="520" y="0.0" width="75" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="sendButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KW6-3Z-kmX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fab-gM-jqL">
                                                 <rect key="frame" x="603" y="0.0" width="75" height="34.333333333333336"/>
